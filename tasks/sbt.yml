@@ -2,10 +2,12 @@
 
 - name: Scala | Download sbt
   get_url:
-    url: "http://dl.bintray.com/sbt/debian/sbt-{{scala_sbt_version}}.deb"
-    dest: "/tmp/sbt-{{scala_sbt_version}}.deb"
+    url: 'https://dl.bintray.com/sbt/debian/sbt-{{scala_sbt_version}}.deb'
+    dest: '/tmp/sbt-{{scala_sbt_version}}.deb'
 
 - name: Scala | Install sbt
-  command: "dpkg --skip-same-version -i /tmp/sbt-{{scala_sbt_version}}.deb"
+  become: yes
+  become_user: root
+  command: 'dpkg --skip-same-version -i /tmp/sbt-{{scala_sbt_version}}.deb'
   register: sbt_dpkg_result
-  changed_when: "'already installed' not in sbt_dpkg_result.stderr"
+  changed_when: '"already installed" not in sbt_dpkg_result.stderr'
