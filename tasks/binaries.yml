@@ -41,18 +41,6 @@
     state: link
     force: yes
 
-#- name: Scala | Add the Scala binary to the system path (/etc/profile)
-#  lineinfile:
-#    dest: /etc/profile
-#    regexp: '{{item.regexp}}'
-#    line: '{{item.line}}'
-#    state: present
-#  with_items:
-#    - regexp: '^SCALA_HOME=/usr/local/scala/default'
-#      line: 'SCALA_HOME=/usr/local/scala/default'
-#    - regexp: '^PATH=.*SCALA_HOME.*'
-#      line: 'PATH=$PATH:$SCALA_HOME/bin'
-
 - name: Scala | Inform the system where Scala is located
   become: yes
   become_user: root

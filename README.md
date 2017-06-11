@@ -1,4 +1,4 @@
-## ANXS - Scala [![Build Status](https://travis-ci.org/ANXS/scala.png)](https://travis-ci.org/ANXS/scala)
+## ANXS - Scala [![Build Status](https://travis-ci.org/vanaoff/scala.png)](https://travis-ci.org/vanaoff/scala)
 
 Ansible role which installs [Scala](http://scala-lang.org/) and [sbt](http://www.scala-sbt.org/).
 
